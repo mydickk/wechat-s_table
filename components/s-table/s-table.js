@@ -1,15 +1,4 @@
-/**
-  rows :[{name: '1', age: 2}],
-    headers: ['商品名称', '销售额', '毛利', '毛利率', '数量'],
-    keys: ['name', 'count', 'age', 'count', 'age'],
-    tableConfig: {
-      // columnWidths: ['80rpx', '140rpx', '120rpx','300rpx'],
-      border: true,
-      scroll: true,
-      // stripe : true,
-      // headbgcolor : '#dddddd'
-    }
-*/
+
 Component({
   /**
    * 组件的属性列表
