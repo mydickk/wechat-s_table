@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "伸缩性最强的表格组件",
+  "usingComponents": {
+    "s-table": "../components/s-table/s-table"
+  }
+}

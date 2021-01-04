@@ -1,0 +1,1 @@
+<s-table config="{{tableConfig}}" rows="{{rows}}" keys="{{keys}}" headers="{{headers}}"></s-table>

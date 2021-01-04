@@ -1,0 +1,30 @@
+<!--compenents/s_table.wxml-->
+<scroll-view scroll-x="{{config.scroll}}" class='scrollClass'>
+  <view class="s_table {{config.border?'s_table-border':''}}">
+    <view class='s_table-header'
+      style='background-color:{{config.headbgcolor || "#f3f0f0"}};'>
+      <view wx:for="{{headers}}"
+      wx:key="index" 
+      style="width:{{config.columnWidths[index] || '180rpx'}}" 
+      class="s_table-header-column {{config.border?'s_table-header-column-border':''}} {{config.titles.length === index + 1 ? 'last-column' : ''}}">
+        {{item}}
+      </view>
+    </view>
+    <view class='s_table-content'>
+      <view wx:for="{{rows}}" 
+      wx:for-index="outIndex" 
+      wx:for-item="outItem" 
+      wx:key="outIndex" 
+      class="s_table-content-row {{config.stripe?(outIndex%2 === 0 ? 's_table-row-white':'s_table-row-gray'):''}}"
+      >
+        <view wx:for="{{keys}}"
+        wx:key="index"
+        style="width:{{config.columnWidths[index] || '180rpx'}};"
+        class="s_table-content-column {{config.border?'s_table-content-column-border':''}}  {{config.titles.length === index + 1 ? 'last-column' : ''}}">
+          {{outItem[item]}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="nodata" wx:if="{{rows.length===0}}">暂无数据</view>
+</scroll-view>
